@@ -294,7 +294,7 @@ class ClassRoomPage extends StatelessWidget {
               title: "Trí tuệ nhân tạo",
               description: "2021-2022.2.TIN3042.001",
               teacher: "Đoàn Thị Hồng Phước",
-              backgroundImage: "img_graduation.jpg",
+              backgroundImage: "img_reachout.jpg",
             ),
           ],
         ),

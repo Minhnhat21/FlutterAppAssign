@@ -3,18 +3,15 @@ import 'package:flutter/material.dart';
 class MyHomePage extends StatelessWidget {
   MyHomePage({super.key});
 
-  List<String> popMenu = [
-    "Setting", "About", "Logout"
-  ];
-
+  List<String> popMenu = ["Setting", "About", "Logout"];
+  String urlImage = 'https://images.unsplash.com/photo-1568160193496-8d92de3c9e76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            gradient:
-            const LinearGradient(colors: [Colors.green, Colors.blue]),
+            gradient: const LinearGradient(colors: [Colors.green, Colors.blue]),
             borderRadius: BorderRadius.circular(20.0),
           ),
         ),
@@ -22,40 +19,45 @@ class MyHomePage extends StatelessWidget {
         //leading: const Icon(Icons.home, color: Color(0xFFEF9595), size: 50),
         actions: [
           PopupMenuButton(
-            itemBuilder: (context) =>
-                popMenu.map((option) =>
-                    PopupMenuItem(
-                        value: option,
-                        child: Text(option)),
-                ).toList(),
+            itemBuilder: (context) => popMenu
+                .map(
+                  (option) => PopupMenuItem(value: option, child: Text(option)),
+                )
+                .toList(),
           ),
-
         ],
         title: const Text("Hello App",
-            style:
-            TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
         backgroundColor: const Color(0xFFEFB495),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20.0),
         ),
       ),
       backgroundColor: const Color(0xFFEBEF95),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      body: ListView(
+        scrollDirection: Axis.vertical,
         children: [
           const Text(
             "Aiza, Welcome Flutter",
             style: TextStyle(
-                fontSize: 30, fontWeight: FontWeight.bold, color: Colors.red),
+                fontSize: 50, fontWeight: FontWeight.bold, color: Colors.red, fontFamily: 'Fuggles'),
             textAlign: TextAlign.center,
           ),
+          Image(
+              image: NetworkImage(urlImage)
+          ),
           const Text(
-            "Minh Nhat",
+            "Nguyễn Hữu Minh Nhật",
             style: TextStyle(
-              fontSize: 20,
+              fontSize: 40,
               color: Colors.indigo,
               fontWeight: FontWeight.bold,
+              fontFamily: 'Fuggles'
+            ),
+          ),
+          const Image(
+            image: AssetImage(
+              'assets/images/dog_super_hero.jpg'
             ),
           ),
           Container(
@@ -65,7 +67,7 @@ class MyHomePage extends StatelessWidget {
             decoration: BoxDecoration(
                 color: Colors.cyan,
                 gradient:
-                const LinearGradient(colors: [Colors.green, Colors.blue]),
+                    const LinearGradient(colors: [Colors.green, Colors.blue]),
                 borderRadius: BorderRadius.circular(20)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -85,7 +87,7 @@ class MyHomePage extends StatelessWidget {
                   onPressed: () {
                     print("Push your hand up");
                     var snackBar =
-                    const SnackBar(content: Text("Push your hand up"));
+                        const SnackBar(content: Text("Push your hand up"));
                     ScaffoldMessenger.of(context).hideCurrentSnackBar();
                     ScaffoldMessenger.of(context).showSnackBar(snackBar);
                     ;
@@ -111,25 +113,15 @@ class MyHomePage extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(
-              label: "Account",
-              icon: Icon(Icons.account_circle)
-          ),
-
-          BottomNavigationBarItem(
-              label: "Logout",
-              icon: Icon(Icons.logout)
-          ),
-
+              label: "Account", icon: Icon(Icons.account_circle)),
+          BottomNavigationBarItem(label: "Logout", icon: Icon(Icons.logout)),
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        backgroundColor: const Color(0xFFEF9595),
-        shape: const CircleBorder(),
-          onPressed: () => {
-
-        },
-        child: const Icon(Icons.add)
-        ),
+          backgroundColor: const Color(0xFFEF9595),
+          shape: const CircleBorder(),
+          onPressed: () => {},
+          child: const Icon(Icons.add)),
       drawer: ListView(
         scrollDirection: Axis.vertical,
         children: [
@@ -149,8 +141,7 @@ class MyHomePage extends StatelessWidget {
               title: Text('Closed'),
               onTap: () {
                 Navigator.pop(context);
-              }
-          ),
+              }),
         ],
       ),
     );
