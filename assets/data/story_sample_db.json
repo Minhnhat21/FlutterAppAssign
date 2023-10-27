@@ -1,0 +1,48 @@
+{
+  "storys": [
+    {
+      "id": "s1",
+      "images:": "assets/images/_seorina.jpg",
+      "user_name": "_seorina"
+    },
+    {
+      "id": "s2",
+      "images:": "assets/images/aespa_official.jpg",
+      "user_name": "aespa_official"
+    },
+    {
+      "id": "s3",
+      "images:": "assets/images/hanni_ssi.jpg",
+      "user_name": "hanni_ssi"
+    },
+    {
+      "id": "s4",
+      "images:": "assets/images/katarinabluu.jpg",
+      "user_name": "katarinabluu"
+    },{
+      "id": "s4",
+      "images:": "assets/images/lalalalisa_m.jpg",
+      "user_name": "lalalalisa_m"
+    },
+    {
+      "id": "s5",
+      "images:": "assets/images/sontungmtp.jpg",
+      "user_name": "sontungmtp"
+    },
+    {
+      "id": "s6",
+      "images:": "assets/images/sooyaaa__.jpg",
+      "user_name": "sooyaaa__"
+    },
+    {
+      "id": "s7",
+      "images:": "assets/images/twicetagram.jpg",
+      "user_name": "twicetagram"
+    },
+    {
+      "id": "s8",
+      "images:": "assets/images/xeesoxee.jpg",
+      "user_name": "xeesoxee"
+    }
+  ]
+}
