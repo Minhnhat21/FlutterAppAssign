@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:learn_flutter/cards/post_card_2.dart';
 import 'package:learn_flutter/cards/story_card.dart';
+import 'package:learn_flutter/models/Account.dart';
+import 'package:learn_flutter/views/screen/profile_account_ig.dart';
 
-import 'cards/post_card.dart';
-import 'cards/post_card_3.dart';
-import 'cards/post_card_4.dart';
-import 'cards/post_card_5.dart';
+import '../../cards/post_card.dart';
+import '../../cards/post_card_3.dart';
+import '../../cards/post_card_4.dart';
+import '../../cards/post_card_5.dart';
 
 
 class MyInstagramApp extends StatefulWidget {
-  MyInstagramApp({super.key});
+  MyInstagramApp({super.key,required this.account});
+  final Account? account;
 
   @override
   State<MyInstagramApp> createState() => _MyInstagramAppState();
@@ -126,7 +129,12 @@ class _MyInstagramAppState extends State<MyInstagramApp> {
                   radius: 14,
                   backgroundImage: AssetImage('assets/images/nhatnhm02.jpg'),
                 ),
-                onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AccountProfile(account: widget.account,))
+                    );
+                  },
               ),
             ],
           ),

@@ -131,11 +131,7 @@ class _PostCardState extends State<PostCard> {
                   },
                 ),
                 IconButton(
-                  icon: const Icon(
-                    Icons.send_outlined,
-                    color: Colors.white70,
-                    size: 30,
-                  ),
+                  icon: Image.asset('assets/images/send_24.png',),
                   onPressed: () {
                     // do something
                   },

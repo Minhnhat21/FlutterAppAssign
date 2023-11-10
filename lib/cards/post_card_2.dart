@@ -137,11 +137,7 @@ class _PostCardState extends State<PostCard2> {
                   },
                 ),
                 IconButton(
-                  icon: const Icon(
-                    Icons.send_outlined,
-                    color: Colors.white70,
-                    size: 30,
-                  ),
+                  icon: Image.asset('assets/images/send_24.png',),
                   onPressed: () {
                     // do something
                   },
@@ -182,8 +178,8 @@ class _PostCardState extends State<PostCard2> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('5.479.854 lượt thích', style: TextStyle(fontSize: 16,fontFamily: 'Nunito'),),
-                  Text('🍊', style: TextStyle(fontSize: 16,fontFamily: 'Nunito'),),
+                  const Text('5.479.854 lượt thích', style: TextStyle(fontSize: 16,fontFamily: 'Nunito'),),
+                  const Text('🍊', style: TextStyle(fontSize: 16,fontFamily: 'Nunito'),),
                   TextButton(
                       onPressed: () {
                         showModalBottomSheet(
@@ -277,8 +273,6 @@ class _PostCardState extends State<PostCard2> {
                                       ],
                                     ),
                                   ),
-
-
                                 ],
                               );
                             });
